@@ -14,7 +14,7 @@ def all_thing_is_obj(object: Any) -> int:
         else:
             output.append(f"{inputObjType.__name__.capitalize()} :")
 
-        output.append(f"<class '{inputObjType.__name__}'>")
+        output.append(f"{inputObjType}")
 
     else:
         output.append(f"Type not found")

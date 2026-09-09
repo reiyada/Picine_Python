@@ -2,6 +2,7 @@ import sys
 
 
 def ConvertToMorse(Object: str) -> str:
+    """This converts the given argument to the morse code"""
     NESTED_MORSE = {
         " ": "/ ",
         "A": ".- ",   "B": "-... ", "C": "-.-. ", "D": "-.. ",
@@ -29,18 +30,21 @@ def ConvertToMorse(Object: str) -> str:
     return result
 
 
-
 def ParseStr(Object: str):
+    """This checks if the given argument is alphanumeric"""
     for c in Object:
-        assert c.isnumeric() or c.isalpha() or c == " ", "the arguments are bad"
+        assert c.isnumeric() or c.isalpha() or c == " ", \
+            "the arguments are bad"
 
 
 def PrintResult():
+    """This dispays the result"""
     assert len(sys.argv) == 2, "more than one argument is provided"
     ParseStr(sys.argv[1])
 
     result = ConvertToMorse(sys.argv[1])
     print(result)
+
 
 def main():
     try:

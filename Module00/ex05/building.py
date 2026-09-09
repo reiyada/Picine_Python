@@ -1,7 +1,7 @@
 import sys
 
 
-def CharCounter(object: str) -> dict:
+def ft_get_char_count_dict(object: str) -> dict:
     """This count each chars and return the total amount"""
     counter = {"Total": 0,
                "Upper": 0,
@@ -27,7 +27,7 @@ def CharCounter(object: str) -> dict:
     return counter
 
 
-def ResultPrinter():
+def ft_print_result():
     """This prints the expected output."""
     assert len(sys.argv) <= 3, "more than one argument is provided"
 
@@ -36,7 +36,7 @@ def ResultPrinter():
     else:
         text = sys.argv[1]
 
-    result = CharCounter(text)
+    result = ft_get_char_count_dict(text)
 
     print(f"The text contains {result["Total"]} characters:")
     print(f"{result["Upper"]} upper letters")
@@ -48,7 +48,7 @@ def ResultPrinter():
 
 def main():
     try:
-        ResultPrinter()
+        ft_print_result()
     except AssertionError as ex:
         print(f"Error: {ex}")
     except EOFError:

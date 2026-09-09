@@ -1,6 +1,6 @@
 import sys
 
-def PrintEvenOrOdd():
+def ft_print_even_or_odd():
     assert len(sys.argv) == 2, "more than one argument is provided"
 
     try:
@@ -16,7 +16,7 @@ def PrintEvenOrOdd():
 
 def main():
     try:
-        PrintEvenOrOdd()
+        ft_print_even_or_odd()
     except AssertionError as ex:
         print(f"Error: {ex}")
 

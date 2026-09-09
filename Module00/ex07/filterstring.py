@@ -1,7 +1,7 @@
 import sys
 
 
-def GetStrList() -> list:
+def ft_get_str_list() -> list:
     """This returns the list of the words that are longer than given number"""
     assert len(sys.argv) == 3
 
@@ -11,16 +11,16 @@ def GetStrList() -> list:
     return [word for word in textList if (lambda w: len(w) > count)(word)]
 
 
-def PrintResult():
+def ft_print_result():
     """This prints the expected output"""
-    result = GetStrList()
+    result = ft_get_str_list()
 
     print(result)
 
 
 def main():
     try:
-        PrintResult()
+        ft_print_result()
     except AssertionError:
         print("the arguments are bad")
     except ValueError:

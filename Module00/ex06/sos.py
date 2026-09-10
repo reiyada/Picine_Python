@@ -3,6 +3,7 @@ import sys
 
 def ft_convert_to_morse(Object: str) -> str:
     """This converts the given argument to the morse code"""
+
     NESTED_MORSE = {
         " ": "/ ",
         "A": ".- ",   "B": "-... ", "C": "-.-. ", "D": "-.. ",
@@ -32,6 +33,7 @@ def ft_convert_to_morse(Object: str) -> str:
 
 def ft_parse_str(Object: str):
     """This checks if the given argument is alphanumeric"""
+
     for c in Object:
         assert c.isnumeric() or c.isalpha() or c == " ", \
             "the arguments are bad"
@@ -39,6 +41,7 @@ def ft_parse_str(Object: str):
 
 def ft_print_result():
     """This dispays the result"""
+
     assert len(sys.argv) == 2, "more than one argument is provided"
     ft_parse_str(sys.argv[1])
 

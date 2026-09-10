@@ -3,6 +3,7 @@ import sys
 
 def ft_get_char_count_dict(object: str) -> dict:
     """This count each chars and return the total amount"""
+
     counter = {"Total": 0,
                "Upper": 0,
                "Lower": 0,
@@ -29,6 +30,7 @@ def ft_get_char_count_dict(object: str) -> dict:
 
 def ft_print_result():
     """This prints the expected output."""
+
     assert len(sys.argv) <= 3, "more than one argument is provided"
 
     if (len(sys.argv) == 1):

@@ -3,6 +3,7 @@ import sys
 
 def ft_get_str_list() -> list:
     """This returns the list of the words that are longer than given number"""
+
     assert len(sys.argv) == 3
 
     textList = sys.argv[1].split()
@@ -13,6 +14,7 @@ def ft_get_str_list() -> list:
 
 def ft_print_result():
     """This prints the expected output"""
+
     result = ft_get_str_list()
 
     print(result)

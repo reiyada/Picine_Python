@@ -3,18 +3,18 @@ from typing import Any
 
 def all_thing_is_obj(object: Any) -> int:
 
-    inputObjType = type(object)
+    input_obj_type = type(object)
     output = list()
 
-    objList = [list, tuple, set, dict, str]
+    obj_list = [list, tuple, set, dict, str]
 
-    if (inputObjType in objList):
-        if (inputObjType is str):
+    if (input_obj_type in obj_list):
+        if (input_obj_type is str):
             output.append(f"{object} is in the kitchen :")
         else:
-            output.append(f"{inputObjType.__name__.capitalize()} :")
+            output.append(f"{input_obj_type.__name__.capitalize()} :")
 
-        output.append(f"{inputObjType}")
+        output.append(f"{input_obj_type}")
 
     else:
         output.append(f"Type not found")

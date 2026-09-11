@@ -1,3 +1,5 @@
+import numpy as np
+
 def parse_height_and_weight(height: list[int | float],
                             weight: list[int | float]):
     """This parse the given values and flag erros if needed"""
@@ -28,6 +30,7 @@ def calcul_bmi(height: list[int | float],
         bmis.append(bmi)
 
     return bmis
+
 
 
 def give_bmi(height: list[int | float],

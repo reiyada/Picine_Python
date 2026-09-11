@@ -1,7 +1,10 @@
 import sys
 
 def ft_print_even_or_odd():
-    assert len(sys.argv) == 2, "more than one argument is provided"
+    assert len(sys.argv) <= 2, "more than one argument is provided"
+
+    if (len(sys.argv) == 1):
+        return
 
     try:
         num = int(sys.argv[1])
@@ -18,7 +21,7 @@ def main():
     try:
         ft_print_even_or_odd()
     except AssertionError as ex:
-        print(f"Error: {ex}")
+        print(f"AssertionError: {ex}")
 
 
 

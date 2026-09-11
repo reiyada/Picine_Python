@@ -15,15 +15,15 @@ def ft_get_char_count_dict(object: str) -> dict:
         counter["Total"] += 1
 
         if (c.isupper()):
-            counter["Upper"] += 1
+            counter['Upper'] += 1
         elif (c.islower()):
-            counter["Lower"] += 1
+            counter['Lower'] += 1
         elif (c == " "):
-            counter["Spaces"] += 1
+            counter['Spaces'] += 1
         elif (c.isdigit()):
-            counter["Digits"] += 1
+            counter['Digits'] += 1
         else:
-            counter["Punctuation marks"] += 1
+            counter['Punctuation marks'] += 1
 
     return counter
 
@@ -31,7 +31,7 @@ def ft_get_char_count_dict(object: str) -> dict:
 def ft_print_result():
     """This prints the expected output."""
 
-    assert len(sys.argv) <= 3, "more than one argument is provided"
+    assert len(sys.argv) <= 2, "more than one argument is provided"
 
     if (len(sys.argv) == 1):
         text = input("What is the text to count?\n")
@@ -40,19 +40,19 @@ def ft_print_result():
 
     result = ft_get_char_count_dict(text)
 
-    print(f"The text contains {result["Total"]} characters:")
-    print(f"{result["Upper"]} upper letters")
-    print(f"{result["Lower"]} lower letters")
-    print(f"{result["Punctuation marks"]} punctuation marks")
-    print(f"{result["Spaces"]} spaces")
-    print(f"{result["Digits"]} digits")
+    print(f"The text contains {result['Total']} characters:")
+    print(f"{result['Upper']} upper letters")
+    print(f"{result['Lower']} lower letters")
+    print(f"{result['Punctuation marks']} punctuation marks")
+    print(f"{result['Spaces']} spaces")
+    print(f"{result['Digits']} digits")
 
 
 def main():
     try:
         ft_print_result()
     except AssertionError as ex:
-        print(f"Error: {ex}")
+        print(f"AssertionError: {ex}")
     except EOFError:
         print(" ")
 

@@ -21,7 +21,7 @@ def ft_convert_to_morse(Object: str) -> str:
     result = ""
 
     for c in Object:
-        if (c.islower):
+        if (c.islower()):
             c = c.capitalize()
 
         morse = NESTED_MORSE[c]
@@ -53,7 +53,7 @@ def main():
     try:
         ft_print_result()
     except AssertionError as ex:
-        print(f"Error: {ex}")
+        print(f"AssertionError: {ex}")
 
 
 if __name__ == "__main__":

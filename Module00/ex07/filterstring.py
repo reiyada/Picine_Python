@@ -24,9 +24,9 @@ def main():
     try:
         ft_print_result()
     except AssertionError:
-        print("the arguments are bad")
+        print("AssertionError: the arguments are bad")
     except ValueError:
-        print("the arguments are bad")
+        print("AssertionError: the arguments are bad")
 
 
 if __name__ == "__main__":

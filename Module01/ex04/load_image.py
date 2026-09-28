@@ -35,12 +35,12 @@ def ft_load(path: str) -> np.array:
     try:
         parse_path(path)
         img_array = img_to_array(path)
-        print_img_info(img_array)
+        # print_img_info(img_array)
 
         if img_array is None:
             raise AssertionError("Image is empty.")
 
-        print(img_array)
+        # print(img_array)
         return img_array
 
     except (AssertionError, FileNotFoundError, OSError) as ex:

@@ -41,7 +41,7 @@ def print_zoomed_img_info(zoomed_img: np.array, height: int,
                           width: int, channel: int):
     """This prints the zoomed image info"""
 
-    print(f"New shape after slicing: {height, width,\
+    print(f"New shape after slicing: {height, width,
                                       channel} or {height, width}")
     print(f"{zoomed_img}")
 
